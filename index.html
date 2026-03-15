@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripa Das | Marketing Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paperboat-blue: #004a99;
+            --soft-grey: #f8f9fa;
+            --text-dark: #2d3436;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--soft-grey);
+            color: var(--text-dark);
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+            text-align: center; 
+        }
+
+        .container { 
+            background: white; 
+            padding: 50px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 500px;
+            border-top: 8px solid var(--paperboat-blue); 
+        }
+
+        .animation-container {
+            width: 150px;
+            margin: 0 auto 20px auto; 
+        }
+
+        .boat-svg {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Make the boat rock gently */
+        .boat {
+            animation: rock 3s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        @keyframes rock {
+            0%, 100% { transform: rotate(-3deg) translateY(0); }
+            50% { transform: rotate(3deg) translateY(-5px); }
+        }
+
+        /* Make the wave move slightly */
+        .wave {
+            animation: moveWave 4s ease-in-out infinite;
+        }
+
+        @keyframes moveWave {
+            0%, 100% { d: path("M0,80 C50,70 150,90 200,80 L200,100 L0,100 Z"); }
+            50% { d: path("M0,80 C50,90 150,70 200,80 L200,100 L0,100 Z"); }
+        }
+
+        h1 { 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--paperboat-blue);
+        }
+
+        .subtitle {
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #636e72;
+            margin-bottom: 30px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #e1f0ff;
+            color: var(--paperboat-blue);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+
+        p { font-weight: 300; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="status-badge">PROJECT IN PROGRESS</div>
+        
+        <div class="animation-container">
+            <svg viewBox="0 0 200 100" class="boat-svg">
+                <path class="wave" d="M0,80 C50,70 150,90 200,80 L200,100 L0,100 Z" fill="#004a99" opacity="0.3"></path>
+                <g class="boat">
+                    <path d="M70,75 L130,75 L140,60 L60,60 Z" fill="#ffffff" stroke="#004a99" stroke-width="2"/>
+                    <path d="M100,60 L100,30 L130,60 Z" fill="#ffffff" stroke="#004a99" stroke-width="2"/>
+                </g>
+            </svg>
+        </div>
+
+        <h1>Ripa Das</h1>
+        <p class="subtitle">MBA Marketing | NIT Trichy</p>
+        
+        <hr>
+        
+        <p>Currently synthesizing data for the <strong>Paper Boat Strategic Brand Audit</strong> and developing a <em>'sardi ki chhutti'</em> themed food and beverages.</p>
+        
+        <p style="font-size: 0.8rem; color: #b2bec3; margin-top: 20px;">
+            Full Case Studies Launching: March 26, 2026
+        </p>
+    </div>
+
+</body>
+</html>
+
